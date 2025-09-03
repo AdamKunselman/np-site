@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>np-data.info</title>
+
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/styles/-search.css">
+  <link rel="stylesheet" href="/styles/index.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="index-container">
+    <div class="index-content">
+      <p class="site-name"><span class="yellow">np</span>-data.info</p>
+      <p class="site-tagline">
+            A simple way to browse all <span class="yellow">398 parks</span> in the <span class="yellow">U.S. National Park System.</span><br>
+            <span class="yellow">Visualize visitor data</span> to get a feel for when the park is busiest.<br>
+            Learn more about each park with  <span class="yellow">AI generated text summaries.</span><br>
+            Plan your next outdoor adventure with confidence, and  <span class="yellow">beat the crowds.</span>
+      </p>
+
+      <p class="cta">Search by Park Name</p>
+
+      <div class="search-wrap">
+        <input id="search" class="search-input" type="text" placeholder="Search parks…" 
+              role="combobox" aria-autocomplete="list" aria-expanded="false" 
+              aria-controls="suggestions" aria-activedescendant="" autocomplete="off">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div id="suggestions" class="suggestions" role="listbox" aria-hidden="true"></div>
+      </div>
+
+      <p class="cta">Browse by Category</p>
+      <div class="category-btns">
+        <button class="category-btn">Park Type</button>
+        <button class="category-btn">Region</button>
+        <button class="category-btn">State</button>
+      </div>
+    </div>
+    
+  </div>
+
+  
+
+  <script type="module" src="/scripts/index.js"></script>
+  <script type="module" src="/scripts/-search.js"></script>
+</body>
+</html>

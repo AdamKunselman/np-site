@@ -1,0 +1,23 @@
+.search-wrap { position: relative; width: 320px; }
+.search-input { 
+  width: 100%; padding: .6rem .8rem; border-radius: 8px; border:none; font-family: 'inter';
+  transition: 0.2s; padding-left: 2.5rem; 
+}
+.search-input:focus { outline: none; }
+.suggestions {
+position: absolute; top: 100%; left: 0; right: 0;
+border: 1px solid #ccc; background: #fff; max-height: 220px; overflow-y: auto;
+display: none; font-family: 'inter';
+}
+.suggestions[aria-hidden="false"] { display: block; border-radius: 0 0 12px 12px;}
+.suggestion { padding: .5rem .75rem; cursor: pointer; font-size: 0.8rem; }
+.suggestion[aria-selected="true"],
+.suggestion:hover { background: #eee; }
+.search-wrap i {
+  position: absolute;
+  left: 10px;             /* adjust horizontally */
+  top: 50%;               
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;   /* click goes through to input */
+}

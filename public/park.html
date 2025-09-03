@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Name</title>
+    
+    
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/park.css">
+    <link rel="stylesheet" href="/styles/-search.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="hidden">
+    <div class="header">
+      <span class="site-name"><span class="yellow">np</span>-data.info</span>
+      <div class="search-container">
+      <div class="search-wrap">
+        <input id="search" class="search-input" type="text" placeholder="Search parks…" 
+              role="combobox" aria-autocomplete="list" aria-expanded="false" 
+              aria-controls="suggestions" aria-activedescendant="" autocomplete="off">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div id="suggestions" class="suggestions" role="listbox" aria-hidden="true"></div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="park-container">
+      <div class="park-box">
+        <div class="img-container">
+          <img class ="park-img" src="/img/ZION.jpg">
+        </div>
+        <h1 class="park-name js-park-name"></h1>
+        <div class="tag-buttons">
+          <button class="park-type js-park-type js-identifier-btn" data-key="parkType"></button>
+          <button class="region js-region js-identifier-btn" data-key="region"></button>
+          <button class="state js-state js-identifier-btn" data-key="state"></button>
+        </div>
+        
+        </select>
+
+        <div class="dropdown-wrapper">
+          <div class="dropdown">
+            <button class="dropbtn">Select Activities</button>
+            <div class="dropdown-content js-dropdown-content">
+            </div>
+          </div>
+        </div>
+
+        <div class="graph-container">
+            <canvas id="chart" class="chart"></canvas>
+        </div>
+        
+        
+        
+        <h2>Summary</h2>
+        <p class="park-summ js-park-summ"></p>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/scripts/park.js"></script>
+    <script type="module" src="/scripts/-search.js"></script>
+</body>
+</html>
