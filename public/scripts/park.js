@@ -3,13 +3,14 @@ import { formatParkName } from './utils/format.js';
 
 const params = new URLSearchParams(window.location.search);
 const parkName = params.get('parkName')
+const defaultImg = '/img/default.png'
 console.log(parkName);
 let parkData;
 let activityNames;
-let activitiesSelected = JSON.parse(localStorage.getItem('selected')) || ['Recreation_Visits', 'Tent_Camping', 'RV_Camping', 'Backcountry_Camping'];
+let activitiesSelected = JSON.parse(localStorage.getItem('selected')) || ['Total_Visitors', 'Tent_Camping', 'RV_Camping', 'Backcountry_Camping'];
 
 const activityIndexMap = {
-        Recreation_Visits: 0,
+        Total_Visitors: 0,
         Private_Camping: 1,
         Private_Lodging: 2,
         Tent_Camping: 3,
@@ -27,9 +28,9 @@ document.querySelector('.site-name').addEventListener('click', () => {
 })
 
 function renderPage() {
-  const {parkName, parkType, region, state, summary} = parkData;
+  const {parkName, parkType, region, state, description, url, images} = parkData;
 
-  if(!parkName || !parkType || !region || !state || !summary) {
+  if(!parkName || !parkType || !region || !state) {
     console.log('ERROR: Some essential park data not passed');
   }
 
@@ -38,7 +39,43 @@ function renderPage() {
   document.querySelector('.js-park-type').innerHTML += parkType;
   document.querySelector('.js-region').innerHTML += region;
   document.querySelector('.js-state').innerHTML += state;
-  document.querySelector('.js-park-summ').innerHTML += summary;
+  
+  if(description){
+    document.querySelector('.js-park-summ').innerHTML +=  description;
+  } else {
+    document.querySelector('.js-park-summ').innerHTML +=  'No description available';
+  }
+  if(url){
+    const container = document.querySelector('.summary-info-container');
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'View Official Site';
+    btn.className = 'more-info';
+    btn.addEventListener('click', () => {
+      window.open(url, '_blank', 'noopener,noreferrer')
+    });
+
+    container.appendChild(btn); 
+  }
+  // Render Image
+  const container = document.querySelector('.img-container');
+  let source = defaultImg;
+  if(images){
+    source = images[0].url;
+  }
+  const img = document.createElement('img');
+  img.type = 'img';
+  img.className = 'park-img';
+  img.src = source;
+  container.appendChild(img);
+  if(images){
+    const credit = document.createElement('span');
+    credit.type = 'span';
+    credit.className = 'credit-text';
+    credit.textContent = `Photo credit: ${images[0].credit}`;
+    container.appendChild(credit);
+  }
   
   //transform data for ChartJS
   dataSet2024 = transformForChartJS(parkData.visitData, '2024');
@@ -86,7 +123,7 @@ function transformForChartJS(visitData, year) {
   // Initialize datasets for each activity
   activityNames = Object.keys(visitData[year][months[0]]);
   const activityColorMap = {
-    Recreation_Visits: "#11251F",
+    Total_Visitors: "#11251F",
     Private_Camping: "#FF4365",
     Private_Lodging: "#00D9C0",
     Tent_Camping: "#FFD93D",

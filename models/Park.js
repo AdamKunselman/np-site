@@ -16,8 +16,14 @@ const parkSchema = new mongoose.Schema({
     state: {
         type:String
     },
-    summary: {
+    description: {
         type:String
+    },
+    url :{
+        type:String
+    },
+    images: {
+        type:Array
     },
     visitData: {
         type:Object
