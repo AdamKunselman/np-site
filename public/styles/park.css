@@ -139,47 +139,6 @@ h2 {
   margin-bottom: 5px;
 }
 
-.header {
-  width: 1fr;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  
-}
-
-.site-name {
-  font-size: 2rem;
-  font-family: 'lateef';
-  font-weight: 600;
-  color: white;
-  padding-right: 5rem;
-  
-}
-
-.yellow {
-  color:#FFD93D;
-}
-
-.search-container {
-  justify-content: right;
-  flex-direction: column;
-  align-items: right;
-  width: 24rem;
-  
-}
-
-.search-bar {
-  width: 70%;
-  border-radius: 8px;
-  border: none;
-  height: 1.5rem;
-}
-
-.suggestions {
-  margin-left:1.5rem;
-}
-
 .img-container {
   height: 240px;
   display: flex;

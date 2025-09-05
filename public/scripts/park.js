@@ -1,6 +1,8 @@
 import { URL } from '../_globals.js';
 import { formatParkName } from './utils/format.js';
 
+import { renderPageHeader } from './pageHeader.js';
+
 const params = new URLSearchParams(window.location.search);
 const parkName = params.get('parkName')
 const defaultImg = '/img/default.png'
@@ -18,14 +20,13 @@ const activityIndexMap = {
         Backcountry_Camping: 5
       };
 
+renderPageHeader();
+
+// REFACTOR!
 fetchParkData(parkName);
 
 let dataSet2024;
 let chartInstance;
-
-document.querySelector('.site-name').addEventListener('click', () => {
-  window.location.href = `${URL}`;
-})
 
 function renderPage() {
   const {parkName, parkType, region, state, description, url, images} = parkData;
@@ -253,7 +254,7 @@ function subscribeIdentButtons() {
       const queryText = btn.innerHTML.replace(/ /g, '+');
       console.log(queryText);
       console.log(btn.dataset);
-      window.location.href = `${URL}/list/?${btn.dataset.key}=${queryText}`
+      window.location.href = `${URL}/list/?${btn.dataset.key}=${encodeURIComponent(queryText)}`
     })
   })
 }

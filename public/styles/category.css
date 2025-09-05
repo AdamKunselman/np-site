@@ -1,0 +1,43 @@
+h1 {
+  font-family: 'lateef';
+  text-align: center;
+  color: white;
+}
+
+.card-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 12rem;
+  margin: 0.5rem;
+}
+
+.card:hover {
+  background-color: #FFD93D;
+}
+
+.cat-name {
+  color: #112820;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cat-count {
+  color: #112820;
+  font-size: 0.6rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}

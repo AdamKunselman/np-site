@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const {getParkData, getListData, getParkNames} = require('../controllers/parks.js');
 
 router.route('/parkdata/:parkName').get(getParkData);

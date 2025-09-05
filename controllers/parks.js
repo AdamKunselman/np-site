@@ -20,11 +20,11 @@ async function getListData(req,res) {
   try {
     const {region, state, parkType} = req.query;
     const query = {}
-    if(region) query.region = region;
-    if(state) query.state = state;
-    if(parkType) query.parkType = parkType;
+    if(region) query.region = decodeURIComponent(region);
+    if(state) query.state = decodeURIComponent(state);
+    if(parkType) query.parkType = decodeURIComponent(parkType);
     const response = await Park.find(query)
-      .setOptions({ sanitizeFilter: true }).select('parkName parkType region state')
+      .setOptions({ sanitizeFilter: true }).select('parkName parkType region state unitCode images')
 
     res.status(StatusCodes.OK).json(response);
   } catch (error) {
@@ -45,5 +45,5 @@ async function getParkNames(req,res) {
 module.exports = {
     getParkData,
     getListData,
-    getParkNames
+    getParkNames,
 };

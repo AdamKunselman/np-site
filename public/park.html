@@ -21,19 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="hidden">
-    <div class="header">
-      <span class="site-name"><span class="yellow">np</span>-data.info</span>
-      <div class="search-container">
-      <div class="search-wrap">
-        <input id="search" class="search-input" type="text" placeholder="Search parks…" 
-              role="combobox" aria-autocomplete="list" aria-expanded="false" 
-              aria-controls="suggestions" aria-activedescendant="" autocomplete="off">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <div id="suggestions" class="suggestions" role="listbox" aria-hidden="true"></div>
-        </div>
-      </div>
-      
-    </div>
+    <div class="header"></div>
     
     <div class="park-container">
       <div class="park-box">
@@ -73,5 +61,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="/scripts/park.js"></script>
     <script type="module" src="/scripts/-search.js"></script>
+    <script type="module" src="/scripts/pageHeader.js"></script>
 </body>
 </html>

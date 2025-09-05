@@ -1,0 +1,63 @@
+h1 {
+  font-family: 'lateef';
+  text-align: center;
+  color: white;
+}
+
+.park-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.park-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 16px;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.1s;
+  margin: 0.5rem;
+}
+
+.park-card:hover {
+  background-color: #FFD93D;
+}
+
+.park-img {
+  height: 150px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.name-cont {
+  width: 380px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.park-name, .park-type, .region-state {
+  color: #112820; 
+}
+
+.park-name, .park-type, .region-state {
+  color: #112820; 
+  font-size: 0.8rem;
+}
+
+.park-name {
+  font-family: 'lateef';
+  font-size: 2rem;
+  margin-bottom: -0.2rem;
+}
+
+.region-state {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
