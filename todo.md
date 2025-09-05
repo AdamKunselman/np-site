@@ -17,17 +17,19 @@
 
 - Add comprehensive error handling throughout back-end
 
+- Create error web page to serve if page cannot be found or error occurs
+
+#### Security
+
+- Sanitize all possible user inputs (mainly URL queries)
+
+- Add security packages like helmet
+
 #### Image Handling
 
-- Download all default images via saved image url's
+- Consider implementing tiny blurring image loading technique
 
-- Convert Images to smaller/more web-friendly format/size
-
-- Populate image hosting DB with images (use Cloudinary?)
-
-- Populate DB with links to images on image DB
-
-- Upsate front-end to use image links from DB
+- Rather than using a default image for parks with no image, just use a grey background with text that says 'No Image'
 
 #### Admin
 

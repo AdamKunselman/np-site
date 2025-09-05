@@ -24,7 +24,7 @@ async function getListData(req,res) {
     if(state) query.state = decodeURIComponent(state);
     if(parkType) query.parkType = decodeURIComponent(parkType);
     const response = await Park.find(query)
-      .setOptions({ sanitizeFilter: true }).select('parkName parkType region state unitCode images')
+      .setOptions({ sanitizeFilter: true }).select('parkName parkType region state unitCode images webImages')
 
     res.status(StatusCodes.OK).json(response);
   } catch (error) {

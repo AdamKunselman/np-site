@@ -27,13 +27,13 @@ async function renderPage() {
 function populateContent(data){
   const container = document.querySelector('.park-cont');
   data.forEach((park) => {
-    let imgUrl = "img/default.png";
-    if(park.images){
-      imgUrl = park.images[0].url; 
+    let imgUrl = "../img/default.png";
+    if(park.webImages){
+      imgUrl = park.webImages.small; 
     }
     container.innerHTML += `
       <div class="park-card" data-name="${park.parkName}">
-        <img class="park-img" src="${imgUrl}">
+        <img class="park-img" src="${imgUrl}" loading="lazy">
         <div class="name-cont"><span class="park-name">${park.parkName}</span></div>
         <span class="park-type">${park.parkType}</span>
         <span class="region-state">${park.region}, ${park.state}</span>

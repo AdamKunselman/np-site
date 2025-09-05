@@ -30,6 +30,10 @@ h2 {
   margin-bottom: 6rem;
 }
 
+.park-name {
+  line-height: 1;
+}
+
 .park-name, .park-type, .region, .state {
   text-align: left;
   margin: 0;
@@ -143,7 +147,7 @@ h2 {
   height: 240px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .park-img {
@@ -167,4 +171,5 @@ h2 {
   font-size: 0.5rem;
   text-align: right;
   margin-top: 0.2rem;
+  margin-bottom: 2rem;
 }

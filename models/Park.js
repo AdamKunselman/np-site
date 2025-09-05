@@ -25,6 +25,10 @@ const parkSchema = new mongoose.Schema({
     images: {
         type:Array
     },
+    webImages: {
+        type:Object,
+        default: null
+    },
     visitData: {
         type:Object
     }

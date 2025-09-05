@@ -39,7 +39,7 @@ async function renderPage() {
     })
 
     document.querySelector('.browse').innerHTML += 
-    `<span class="yellow">${queryMap[query]} ...</span>`
+    `<span class="yellow">${(queryMap[query]).replace("+", " ")} ...</span>`
   } catch (error) {
     console.log(error)
   }

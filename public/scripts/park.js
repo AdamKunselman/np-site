@@ -29,7 +29,7 @@ let dataSet2024;
 let chartInstance;
 
 function renderPage() {
-  const {parkName, parkType, region, state, description, url, images} = parkData;
+  const {parkName, parkType, region, state, description, url, webImages, images} = parkData;
 
   if(!parkName || !parkType || !region || !state) {
     console.log('ERROR: Some essential park data not passed');
@@ -62,8 +62,8 @@ function renderPage() {
   // Render Image
   const container = document.querySelector('.img-container');
   let source = defaultImg;
-  if(images){
-    source = images[0].url;
+  if(webImages){
+    source = webImages.large;
   }
   const img = document.createElement('img');
   img.type = 'img';
