@@ -4,12 +4,15 @@ h1 {
   color: white;
 }
 
+
 .park-cont {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 95%;
+  max-width: 1500px;
+  margin-bottom: 2rem;
 }
 
 .park-card {

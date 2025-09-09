@@ -2,6 +2,7 @@ import { URL } from '../_globals.js';
 import { formatParkName } from './utils/format.js';
 
 import { renderPageHeader } from './pageHeader.js';
+import { renderPageFooter } from './pageFooter.js';
 
 const params = new URLSearchParams(window.location.search);
 const parkName = params.get('parkName')
@@ -27,6 +28,8 @@ fetchParkData(parkName);
 
 let dataSet2024;
 let chartInstance;
+
+renderPageFooter();
 
 function renderPage() {
   const {parkName, parkType, region, state, description, url, webImages, images} = parkData;
@@ -241,9 +244,12 @@ function renderChart(dataSetsToDisplay) {
                 boxWidth: 10,   
                 boxHeight: 10,  
                 padding: 15
-        }
-      }
-    }
+              }
+            }
+          },
+          responsive: true,
+          maintainAspectRatio: false,
+
       }
   });
 }

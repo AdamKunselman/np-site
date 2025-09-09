@@ -1,4 +1,5 @@
 import { renderPageHeader } from './pageHeader.js';
+import { renderPageFooter } from './pageFooter.js';
 import { URL } from '../_globals.js';
 import { getUrlParam, fetchData } from './utils/generic.js';
 import { getStateName } from './utils/format.js';
@@ -21,6 +22,7 @@ const queryIdentMap = {
 
 renderPageHeader();
 renderPage();
+renderPageFooter();
 
 async function renderPage() {
   try {

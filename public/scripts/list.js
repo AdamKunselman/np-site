@@ -1,4 +1,5 @@
 import { renderPageHeader } from './pageHeader.js';
+import { renderPageFooter } from './pageFooter.js';
 import { fetchData } from './utils/generic.js';
 import { getStateName } from './utils/format.js';
 import { URL } from '../_globals.js';
@@ -9,6 +10,7 @@ setCategoryAndValue();
 
 renderPageHeader();
 await renderPage();
+renderPageFooter();
 
 async function renderPage() {
   setH1Content();

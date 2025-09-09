@@ -1,23 +1,28 @@
 ## Project To-Do's
 
 #### Front-end
-- Make all web-pages responsive
 
-- Add footer with relevant links
+- Create _'/about'_ page
 
-- Add info pages for footer links
+- Create _'/tos'_ page
 
-- Create _'About'_ page
+- Create _'/privacy'_ page
 
-- Add needed disclaimers and copyright info to footer
-
-#### Error Handling
+- Create _'Error/404'_ page (to display if a page can't be found)
 
 - Add comprehensive error handling throughout front-end
 
-- Add comprehensive error handling throughout back-end
+#### Back-end
 
-- Create error web page to serve if page cannot be found or error occurs
+- Create _'/about'_ route/controller
+
+- Create _'/tos'_ route/controller
+
+- Create _'/privacy'_ route/controller
+
+- Create _'Error/404'_ page router/controller
+
+- Add comprehensive error handling throughout back-end
 
 #### Security
 
@@ -38,3 +43,7 @@
 - Generate Privacy Policy and populate related pages
 
 - Write documentation for api requests
+
+#### Bugs!
+
+- Parks with '&' in the name return 404 requests when loading park page

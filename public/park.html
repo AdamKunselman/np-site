@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Park Name</title>
+    <title>parkdata.io | Park</title>
+
+    <link rel="icon" href="/img/favicon.png" type="image/png">
     
     
     <link rel="stylesheet" href="/styles/styles.css">
@@ -21,46 +23,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="hidden">
-    <div class="header"></div>
+  <div class="all">
+    <main>
+      <div class="header"></div>
     
-    <div class="park-container">
-      <div class="park-box">
-        <div class="img-container">
-          
-        </div>
-        <h1 class="park-name js-park-name"></h1>
-        <div class="tag-buttons">
-          <button class="park-type js-park-type js-identifier-btn" data-key="parkType"></button>
-          <button class="region js-region js-identifier-btn" data-key="region"></button>
-          <button class="state js-state js-identifier-btn" data-key="state"></button>
-        </div>
-        
-        </select>
+      <div class="park-container">
+        <div class="park-box">
+          <div class="img-container"></div>
+          <h1 class="park-name js-park-name"></h1>
+          <div class="tag-buttons">
+            <button class="park-type js-park-type js-identifier-btn" data-key="parkType"></button>
+            <button class="region js-region js-identifier-btn" data-key="region"></button>
+            <button class="state js-state js-identifier-btn" data-key="state"></button>
+          </div>
 
-        <div class="dropdown-wrapper">
-          <div class="dropdown">
-            <button class="dropbtn">Select Metrics</button>
-            <div class="dropdown-content js-dropdown-content">
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <button class="dropbtn">Select Metrics</button>
+              <div class="dropdown-content js-dropdown-content">
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="graph-container">
-            <canvas id="chart" class="chart"></canvas>
+          <div class="graph-container">
+              <canvas id="chart" class="chart"></canvas>
+          </div>
+          
+          
+          <div class="summary-info-container">
+            <h2>Description</h2>
+          </div>
+          <p class="park-summ js-park-summ"></p>
         </div>
-        
-        
-        <div class="summary-info-container">
-          <h2>Description</h2>
-        </div>
-        <p class="park-summ js-park-summ"></p>
       </div>
-    </div>
+    </main>
+    <div class="footer"></div>
+  </div>
     
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="/scripts/park.js"></script>
-    <script type="module" src="/scripts/-search.js"></script>
-    <script type="module" src="/scripts/pageHeader.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="/scripts/park.js"></script>
+  <script type="module" src="/scripts/-search.js"></script>
+  <script type="module" src="/scripts/pageHeader.js"></script>
 </body>
 </html>

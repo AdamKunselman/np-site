@@ -9,6 +9,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   
 }
 
@@ -22,12 +23,12 @@ h2 {
 
 .park-box {
   justify-self: center;
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   background: linear-gradient(to bottom, #FFFFFF,  #E4E4E4);
   padding: 2rem 2rem;
   padding-bottom: 4rem;
   border-radius: 16px;
-  margin-bottom: 6rem;
 }
 
 .park-name {
@@ -100,8 +101,15 @@ h2 {
 
 .graph-container {
   justify-self: center;
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   margin-top: 0rem;
+}
+
+.graph-container canvas {
+  display: block;     
+  width: 100% !important;
+  height: 60% !important;
 }
 
 /* Dropdown container */
@@ -144,7 +152,8 @@ h2 {
 }
 
 .img-container {
-  height: 240px;
+  height: 30vw;
+  max-height: 240px;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;

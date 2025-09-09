@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>parkdata.io</title>
 
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+
   <link rel="stylesheet" href="/styles/styles.css">
   <link rel="stylesheet" href="/styles/-search.css">
   <link rel="stylesheet" href="/styles/index.css">
@@ -21,33 +23,39 @@
 </head>
 <body>
 
-  <div class="index-container">
-    <div class="index-content">
-      <p class="site-name"><span class="yellow">parkdata</span>.io</p>
-      <p class="site-tagline">
-            A simple way to browse all <span class="yellow">398 parks</span> in the <span class="yellow">U.S. National Park System.</span><br>
-            <span class="yellow">Visualize visitor data</span> to get a feel for when the park is busiest.<br>
-            Plan your next outdoor adventure with confidence, and  <span class="yellow">beat the crowds.</span>
-      </p>
+  <div clas="all">
+    <main>
+      <div class="index-container">
+        <div class="index-content"><div class="site-name-icon">
+          <img class="index-icon" src="img/icon.png">
+          <span class="site-name"><span class="yellow">parkdata</span>.io</span>
+        </div>
+          <p class="site-tagline">
+                A simple way to browse all <span class="yellow">398 parks</span> in the <span class="yellow">U.S. National Park System.</span><br>
+                <span class="yellow">Visualize visitor data</span> to get a feel for when the park is busiest.<br>
+                Plan your next outdoor adventure with confidence, and  <span class="yellow">beat the crowds.</span>
+          </p>
 
-      <p class="cta">Search by Park Name</p>
+          <p class="cta">Search by <span class="yellow">Park Name</span></p>
 
-      <div class="search-wrap">
-        <input id="search" class="search-input" type="text" placeholder="Search parks…" 
-              role="combobox" aria-autocomplete="list" aria-expanded="false" 
-              aria-controls="suggestions" aria-activedescendant="" autocomplete="off">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <div id="suggestions" class="suggestions" role="listbox" aria-hidden="true"></div>
+          <div class="search-wrap">
+            <input id="search" class="search-input" type="text" placeholder="Search parks…" 
+                  role="combobox" aria-autocomplete="list" aria-expanded="false" 
+                  aria-controls="suggestions" aria-activedescendant="" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div id="suggestions" class="suggestions" role="listbox" aria-hidden="true"></div>
+          </div>
+
+          <p class="cta">Browse by <span class="yellow">Category</span></p>
+          <div class="category-btns">
+            <button class="category-btn" data-category="types">Park Type</button>
+            <button class="category-btn" data-category="regions">Region</button>
+            <button class="category-btn" data-category="states">State</button>
+          </div>
+        </div>
       </div>
-
-      <p class="cta">Browse by Category</p>
-      <div class="category-btns">
-        <button class="category-btn" data-category="types">Park Type</button>
-        <button class="category-btn" data-category="regions">Region</button>
-        <button class="category-btn" data-category="states">State</button>
-      </div>
-    </div>
-    
+    </main>
+    <div class="footer"></div>
   </div>
 
   
