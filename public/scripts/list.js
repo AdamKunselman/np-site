@@ -58,7 +58,7 @@ function setCategoryAndValue() {
     expectedParams.forEach((p) => {
     if(params.has(p)){
       category = p
-      categoryValue = params.get(p);
+      categoryValue = decodeURIComponent(params.get(p));
     }
   })
   } else {

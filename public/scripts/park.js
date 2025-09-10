@@ -39,11 +39,18 @@ function renderPage() {
   }
 
   //Populate basic Park Info fields
-  document.querySelector('.js-park-name').innerHTML = formatParkName(parkName);
-  document.querySelector('.js-park-type').innerHTML += parkType;
-  document.querySelector('.js-region').innerHTML += region;
-  document.querySelector('.js-state').innerHTML += state;
-  
+  if(parkName) {
+    document.querySelector('.js-park-name').innerHTML = formatParkName(parkName);
+  }
+  if(parkType) {
+    document.querySelector('.js-park-type').innerHTML += parkType;
+  }
+  if(region) {
+    document.querySelector('.js-region').innerHTML += region;
+  }
+  if(state) {
+    document.querySelector('.js-state').innerHTML += state;
+  }
   if(description){
     document.querySelector('.js-park-summ').innerHTML +=  description;
   } else {
@@ -257,10 +264,14 @@ function renderChart(dataSetsToDisplay) {
 function subscribeIdentButtons() {
   document.querySelectorAll('.js-identifier-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const queryText = btn.innerHTML.replace(/ /g, '+');
-      console.log(queryText);
-      console.log(btn.dataset);
-      window.location.href = `${URL}/list/?${btn.dataset.key}=${encodeURIComponent(queryText)}`
+      const queryText = btn.textContent;
+      let uriQuery;
+      if(queryText) {
+        uriQuery = queryText
+      } else {
+        return
+      }
+      window.location.href = `${URL}/list/?${btn.dataset.key}=${encodeURIComponent(uriQuery)}`
     })
   })
 }

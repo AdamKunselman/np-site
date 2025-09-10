@@ -6,9 +6,26 @@ require ('dotenv').config();
 const parkRoutes = require('./routes/parks.js');
 const infoRoutes = require('./routes/info.js');
 const { StatusCodes } = require('http-status-codes');
+const sanitizeIncoming = require('./middleware/sanitize.js');
+const helmet = require('helmet');
 
 
 app.use(express.json());
+app.use(sanitizeIncoming);
+app.use(helmet({
+  contentSecurityPolicy: {
+    useDefaults: true,
+    directives: {
+      "default-src": ["'self'"],
+      "script-src": ["'self'"],           // stays strict
+      "style-src": ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com", "https://fonts.googleapis.com"],
+      "font-src": ["'self'", "https://fonts.gstatic.com", "https://cdnjs.cloudflare.com"],
+      "img-src": ["'self'", "data:", "blob:", "https://res.cloudinary.com"],
+      "connect-src": ["'self'", "https://developer.nps.gov", "https://api.nps.gov"], // if calling NPS API
+      "object-src": ["'none'"]
+    }
+  }
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1', parkRoutes);

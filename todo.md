@@ -24,12 +24,6 @@
 
 - Add comprehensive error handling throughout back-end
 
-#### Security
-
-- Sanitize all possible user inputs (mainly URL queries)
-
-- Add security packages like helmet
-
 #### Image Handling
 
 - Consider implementing tiny blurring image loading technique
@@ -47,3 +41,5 @@
 #### Bugs!
 
 - Parks with '&' in the name return 404 requests when loading park page
+
+- Some parks do not have a state associated with them for some reason. Might need to adjust this in the db seeding function

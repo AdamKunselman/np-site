@@ -39,7 +39,7 @@ let activeIndex = -1; // keyboard highlight
 let currentItems = [];
 
 function render(items) {
-  box.innerHTML = "";
+  box.textContent = "";
   activeIndex = -1;
   currentItems = items;
 
