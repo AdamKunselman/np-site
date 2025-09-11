@@ -1,6 +1,6 @@
 
 p{
-  color:white;
+  color: var(--white-color);
 }
 
 .site-name {
@@ -8,7 +8,7 @@ p{
   font-size: 4rem;
   font-family: 'lateef';
   font-weight: 600;
-  color: white;
+  color: var(--white-color);
   text-align: center;
   align-self: center;
 }
@@ -27,7 +27,7 @@ p{
 }
 
 .yellow {
-  color:#FFD93D;
+  color:var(--primary-color);
 }
 
 .index-container {
@@ -79,7 +79,7 @@ p{
 .cta {
   font-family: 'lateef';
   font-size: 2rem;
-  color: white;
+  color: var(--white-color);
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -100,11 +100,11 @@ p{
   border: none;
   cursor: pointer;
   transition: 0.2s;
-  color: #112820;
+  color: var(--bg-color);
 }
 
 .category-btn:hover {
-  background-color: #FFD93D;
+  background-color: var(--primary-color);
 }
 
 @media (max-width: 600px) {

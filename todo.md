@@ -8,8 +8,6 @@
 
 - Create _'/privacy'_ page
 
-- Create _'Error/404'_ page (to display if a page can't be found)
-
 - Add comprehensive error handling throughout front-end
 
 #### Back-end
@@ -19,8 +17,6 @@
 - Create _'/tos'_ route/controller
 
 - Create _'/privacy'_ route/controller
-
-- Create _'Error/404'_ page router/controller
 
 - Add comprehensive error handling throughout back-end
 

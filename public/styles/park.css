@@ -44,8 +44,8 @@ h2 {
 .park-type, .region, .state, .dropbtn {
   margin: 0.2rem;
   padding: 0.5rem 2rem;
-  background-color: #11251F;
-  color: #FFD93D;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -54,8 +54,8 @@ h2 {
 }
 
 .park-type:hover, .region:hover, .state:hover {
-  color: #11251F;
-  background-color: #FFD93D;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
 }
 
 .dropbtn, .more-info {
@@ -164,7 +164,7 @@ h2 {
   height: 100%;
   object-fit: cover;
   border: solid;
-  border-color: #11251F; 
+  border-color: var(--bg-color);; 
   border-radius: 8px;
 }
 

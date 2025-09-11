@@ -44,6 +44,14 @@ app.get('/category', (req,res) => {
     res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/category.html'));
 });
 
+app.get('/error', (req,res) => {
+  res.status(StatusCodes.ACCEPTED).sendFile(path.join(__dirname, 'public/error.html'));
+});
+
+app.use((req,res) => {
+  res.status(StatusCodes.NOT_FOUND).sendFile(path.join(__dirname, 'public/notFound.html'));
+});
+
 const port = process.env.PORT || 5000;
 
 async function start() {

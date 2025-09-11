@@ -1,0 +1,11 @@
+h1, p {
+  color: var(--primary-color);
+}
+
+.error-notFound-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}

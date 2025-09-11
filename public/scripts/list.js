@@ -16,12 +16,14 @@ async function renderPage() {
   setH1Content();
   try {
     const data = await fetchData(`/api/v1/list?${category}=${categoryValue}`);
-    console.log(data);
-    if(data){
+    if(data.length >= 1){
       populateContent(data);
+    } else if (!data || data.length === 0) {
+      window.location.href = `${URL}/error`
     }
   } catch (error) {
     console.log(error);
+    window.location.href = `${URL}/error`
   }
   
 }

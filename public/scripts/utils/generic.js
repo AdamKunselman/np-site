@@ -16,5 +16,6 @@ export async function fetchData(urlExt) {
       return data;
     } catch (error) {
       console.log(error);
+      window.location.href = `${URL}/error`
     }
 }

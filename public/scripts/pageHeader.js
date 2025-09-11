@@ -2,7 +2,7 @@ import { URL } from '../_globals.js';
 
 export function renderPageHeader() {
   addHTML();
-  document.querySelector('.site-name').addEventListener('click', () => {
+  document.querySelector('.site-name-icon').addEventListener('click', () => {
     window.location.href = `${URL}`;
   })
 };

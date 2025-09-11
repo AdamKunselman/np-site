@@ -119,11 +119,12 @@ async function fetchParkData(parkName) {
       renderPage();
     } else {
       console.log('Failed to render page.');
-      //renderErrorPage();
+      window.location.href = `${URL}/error`
     }
     
   } catch (error) {
     console.log(error);
+    window.location.href = `${URL}/error`
   }
   
 };

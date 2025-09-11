@@ -1,7 +1,7 @@
 h1 {
   font-family: 'lateef';
   text-align: center;
-  color: white;
+  color: var(--white-color);
 }
 
 .card-cont {
@@ -17,7 +17,7 @@ h1 {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--white-color);
   padding: 1rem 2rem;
   border-radius: 16px;
   cursor: pointer;
@@ -27,17 +27,17 @@ h1 {
 }
 
 .card:hover {
-  background-color: #FFD93D;
+  background-color: var(--primary-color);
 }
 
 .cat-name {
-  color: #112820;
+  color: var(--bg-color);
   font-size: 0.8rem;
   font-weight: 600;
 }
 
 .cat-count {
-  color: #112820;
+  color: var(--bg-color);
   font-size: 0.6rem;
   margin-bottom: 0.2rem;
   margin-top: 0.5rem;

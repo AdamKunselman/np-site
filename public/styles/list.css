@@ -1,7 +1,7 @@
 h1 {
   font-family: 'lateef';
   text-align: center;
-  color: white;
+  color: var(--white-color);
 }
 
 
@@ -18,7 +18,7 @@ h1 {
 .park-card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--white-color);
   padding: 1rem;
   border-radius: 16px;
   justify-content: center;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .park-card:hover {
-  background-color: #FFD93D;
+  background-color: var(--primary-color);
 }
 
 .park-img {
@@ -45,11 +45,11 @@ h1 {
 }
 
 .park-name, .park-type, .region-state {
-  color: #112820; 
+  color: var(--bg-color); 
 }
 
 .park-name, .park-type, .region-state {
-  color: #112820; 
+  color: var(--bg-color); 
   font-size: 0.8rem;
 }
 
