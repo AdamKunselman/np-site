@@ -9,6 +9,7 @@ async function getCategoryList(req,res) {
     const data = response[0][query];
      res.status(StatusCodes.OK).json(data);
   } catch (error) {
+    res.status(StatusCodes.BAD_REQUEST)
     console.log(error)
   }
 }

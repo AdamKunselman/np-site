@@ -12,6 +12,7 @@ async function getParkData(req,res) {
         res.status(StatusCodes.NOT_FOUND).send(`Cannot find park with parkName: ${req.params.parkName}`);
       }      
   } catch (error) {
+    res.status(StatusCodes.BAD_REQUEST)
     console.log(error);
   }
 }
@@ -28,6 +29,7 @@ async function getListData(req,res) {
 
     res.status(StatusCodes.OK).json(response);
   } catch (error) {
+    res.status(StatusCodes.BAD_REQUEST)
     console.log(error);
   }
 }
@@ -38,6 +40,7 @@ async function getParkNames(req,res) {
     const names = response.map(name => name.parkName);
     res.status(StatusCodes.OK).send(names);
   } catch (error) {
+    res.status(StatusCodes.BAD_REQUEST)
     console.log(error);
   }
 }

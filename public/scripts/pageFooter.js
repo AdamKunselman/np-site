@@ -8,7 +8,6 @@ function addHTML () {
   const container = document.querySelector('.footer');
   container.innerHTML = `
   <div class="footer-content">
-    <a class="footer-link" href="${`${URL}/about`}" data-content="about">About</a>
     <a class="footer-link" href="${`${URL}/terms`}" data-content="tos">Terms of Use</a>
     <a class="footer-link" href="${`${URL}/privacy`}" data-content="privacyPolicy">Privacy Policy</a>
     <p class="copyright-info">Copyright © 2025 Atomware LLC</p>

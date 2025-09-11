@@ -32,17 +32,23 @@ app.use('/api/v1', parkRoutes);
 app.use('/api/v1/info', infoRoutes);
 
 app.get('/', (req,res) => {
-    res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/index.html'));
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/index.html'));
 });
 app.get('/park', (req,res) => {
-    res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/park.html'));
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/park.html'));
 });
 app.get('/list', (req,res) => {
-    res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/list.html'));
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/list.html'));
 });
 app.get('/category', (req,res) => {
-    res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/category.html'));
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/category.html'));
 });
+app.get('/terms', (req,res) => {
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/tos.html'));
+})
+app.get('/privacy', (req,res) => {
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, 'public/privacy.html'));
+})
 
 app.get('/error', (req,res) => {
   res.status(StatusCodes.ACCEPTED).sendFile(path.join(__dirname, 'public/error.html'));

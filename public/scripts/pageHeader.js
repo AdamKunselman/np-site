@@ -3,7 +3,7 @@ import { URL } from '../_globals.js';
 export function renderPageHeader() {
   addHTML();
   document.querySelector('.site-name-icon').addEventListener('click', () => {
-    window.location.href = `${URL}`;
+    window.location.href = `/`;
   })
 };
 

@@ -2,23 +2,7 @@
 
 #### Front-end
 
-- Create _'/about'_ page
-
-- Create _'/tos'_ page
-
-- Create _'/privacy'_ page
-
-- Add comprehensive error handling throughout front-end
-
 #### Back-end
-
-- Create _'/about'_ route/controller
-
-- Create _'/tos'_ route/controller
-
-- Create _'/privacy'_ route/controller
-
-- Add comprehensive error handling throughout back-end
 
 #### Image Handling
 
@@ -28,11 +12,17 @@
 
 #### Admin
 
-- Generate TOS and populate related pages
-
-- Generate Privacy Policy and populate related pages
-
 - Write documentation for api requests
+
+#### Testing
+
+- Add a testing framework (maybe Jasmine)
+
+- Build integration test for each park page
+
+- Build integration test for each park category
+
+- Build integration test for each park list
 
 #### Bugs!
 
